@@ -1,7 +1,6 @@
 "use strict";
 
 let allItems = [];
-let oldArray = [];
 let keyArr = [];
 
 // Constructor
@@ -12,7 +11,6 @@ function Items(image_url, title, desc, horns, keyword) {
   this.horns = horns;
   this.keyword = keyword;
   allItems.push(this);
-  oldArray.push(this);
 }
 
 // Get data from data folder
@@ -104,10 +102,6 @@ $("#sorting").change(function () {
       item.render();
     });
     // Default
-  } else if (value === "default") {
-    oldArray.forEach((item) => {
-      item.render();
-    });
   }
   $("#photo-template").hide();
 });
